@@ -65,7 +65,7 @@ namespace Hazel
 	{
 	public:
 		MouseButtonPressedEvent(int button)
-			: m_Button(button) {}
+			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
 		{
@@ -77,11 +77,11 @@ namespace Hazel
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class HAZEL_API MouseButtonReleasedEvent : MouseButtonEvent
+	class HAZEL_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonReleasedEvent(int button)
-			: m_Button(button) {}
+			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
 		{

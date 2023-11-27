@@ -21,7 +21,7 @@ namespace Hazel
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
-			: m_KeyCode(keycode), m_RepeatCount(repeatCount) {}
+			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 
@@ -41,7 +41,7 @@ namespace Hazel
 	{
 	public:
 		KeyReleasedEvent(int keycode)
-			: m_KeyCode(keycode) {}
+			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
 		{
